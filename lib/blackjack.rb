@@ -38,17 +38,16 @@ def initial_round
 end
 
 def hit?(card_total)
-  prompt_user
-  user_input =get_user_input
-  if user_input =="h"
-    deal_card+=card_total
-
-    elsif user_input =="s"
-    return card_total
+  # code hit? here	  prompt_user
+  answer = get_user_input
+  if answer == 'h'
+    card_total += deal_card
+  elsif answer == 's'
+    card_total
   else
     invalid_command
   end
-end
+end	end
 
 def invalid_command
   puts "Please enter a valid command"
